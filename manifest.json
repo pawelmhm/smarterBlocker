@@ -1,0 +1,16 @@
+{
+	"manifest_version":2,
+	
+	"name": "Significant Other Alert",
+	"description":"Automatically notifies significant other about destructive activity", 
+	"version":"0.1",
+
+	"permissions": [
+		"http://sio.com:5000/xml"
+	],
+	"browser_action": {
+		"default_icon":"icon.png",
+		"default_popup":"popup.html"
+	}
+}
+
