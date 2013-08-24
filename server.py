@@ -1,5 +1,6 @@
 from flask import Flask,request,redirect,render_template
 from sqlite3 import dbapi2 as sqlite3
+import json
 
 DEBUG = True
 DATABASE = "nowa.db"
@@ -16,19 +17,20 @@ def hello():
 
 @app.route("/xml",methods=["GET","POST"])
 def ass():
-	if request.method == "GET":
-		x = "alfa"
-		y = "beta"
-		with get_db() as db:
-			db.cursor().execute("INSERT INTO data (message,datetime) VALUES (?,?)", (x,y))
-		db.commit()
+	if request.method == "POST":
+		o = json.loads(request.data)
+		#x = "aa"
+		#y = "bb"
+		#with get_db() as db:
+		#	db.cursor().execute("INSERT INTO data (message,datetime) VALUES (?,?)", (x,y))
+		#db.commit()
+		return str(o) 
+
+	elif request.method == "GET":
 		with get_db() as db:
 			data = db.cursor().execute("SELECT * FROM data")
 		returned = [i for i in data.fetchall()]
 		return str(returned)
-	elif request.method == "POST":
-		 d = request.form["first"]
-		 return str(d) 
 	return "request made ok"
 
 def get_db():
