@@ -1,7 +1,7 @@
-smarterBlocker
-==============
+Smarter Blocker
+===============================
 
-SmarterBlocker is a chrome extensions that takes mature approach to blocking adult content. 
-Instead of blocking access to adult websites it simply either redirects user to some motivational posts, 
-or chooses one item from bookmarks (provided they exists). It's probably not suitable as a replacement
-for sophisticated porn blocking systems, but its just a fun project that appears suprisingly useful and efficient. 
+Chrome extensions which allows users to block certain websites and provide set up a redirect rule so that each time the user tries to access a webpage which is on the blacklist he is redirected to whitelisted page. Can be used for as a tool for increasing productivity, each time you attemp to go to sites which you consider unproductive you will be redirected to some other, more beneficial page. 
+
+
+
